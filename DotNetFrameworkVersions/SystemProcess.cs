@@ -89,7 +89,7 @@ namespace DotNetFrameworkVersions
                     else
                     {
                         release = Convert.ToInt32(GetRegistryValue(ref fields, KEY_RELEASE));
-                        releaseName = this.DotNetFrameworkVersions.Where(r => r.Item1 >= release).OrderBy(r => r.Item1).SingleOrDefault().Item2;
+                        releaseName = this.DotNetFrameworkVersions.Where(r => r.Item1 >= release).OrderBy(r => r.Item1).FirstOrDefault().Item2;
                     }
                 }
 
